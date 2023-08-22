@@ -10,6 +10,15 @@ getById(_id){
 
 
 }
+create(news){
+    return newsRepository.create(news)
+}
+update(_id,news){
+    return newsRepository.findByIdAndUpdate(_id,news)
+}
+delete(_id){
+    return newsRepository.findByIdAndRemove(_id)
+}
 }
 
-export default new NewsService;
+export default new NewsService();
